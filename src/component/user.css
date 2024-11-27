@@ -1,0 +1,75 @@
+/* General Table Styles */
+.user-table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden; /* Ensures rounded corners work on all table cells */
+    transition: transform 0.3s ease-in-out;
+}
+
+.user-table:hover {
+    transform: scale(1.02); /* Subtle scale effect on hover for elegance */
+}
+
+/* Table Header */
+.user-table thead {
+    background-color: #4CAF50;
+    color: #ffffff;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.user-table thead th {
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid #388e3c;
+    border-radius: 10px 10px 0 0; /* Rounded corners for the header */
+}
+
+/* Table Body */
+.user-table tbody tr {
+    /* Removed hover effects */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.user-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.user-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Hover Effects for Table Rows - REMOVED */
+/*
+.user-table tbody tr:hover {
+    background-color: #e8f5e9;
+    transform: translateY(-2px); /* Slight lift effect on hover 
+}
+*/
+
+.user-table tbody td {
+    padding: 12px 18px;
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .user-table {
+        width: 100%;
+        box-shadow: none; /* Remove box-shadow for smaller screens */
+    }
+
+    .user-table thead th, .user-table tbody td {
+        font-size: 0.9rem;
+        padding: 10px 14px;
+    }
+}
